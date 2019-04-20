@@ -18,6 +18,9 @@ public interface HelloWorld {
      * @param array the array to which {@code hello, world} bytes are set.
      * @param index the starting index of the array.
      * @return given array.
+     * @throws NullPointerException      if {@code array} is {@code null}
+     * @throws IndexOutOfBoundsException if {@code index} is negative or {@code index} + {@value SIZE} is greater than
+     *                                   {@code array.length}
      */
-    byte[] set(byte[] array, final int index);
+    byte[] set(byte[] array, int index);
 }
